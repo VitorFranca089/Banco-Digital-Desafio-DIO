@@ -11,39 +11,35 @@ public abstract class Conta implements InterfaceConta{
     protected int numero;
     protected double saldo = 0;
     protected Cliente cliente;
+    protected int senha;
 
-    public Conta(Cliente cliente){
+    public Conta(Cliente cliente, int senha){
         this.agencia = AGENCIA_PADRAO;
         this.numero = SEQUENCIAL++;
         this.cliente = cliente;
-    }
-
-    public double getSaldo() {
-        return saldo;
-    }
-
-    public int getNumero() {
-        return numero;
-    }
-
-    public int getAgencia() {
-        return agencia;
+        this.senha = senha;
     }
 
     @Override
-    public void sacar(double valor) {
-        saldo -= valor;
+    public void sacar(double valor, int senha) {
+        if(verificaSenha(senha)){
+            saldo -= valor;
+            System.out.printf("Saque realizado com sucesso. Seu saldo atual: R$ %.2f\n", saldo);
+        }
     }
 
     @Override
     public void depositar(double valor) {
         saldo += valor;
+        System.out.printf("Deposito realizado com sucesso. Seu saldo atual: R$ %.2f\n", saldo);
     }
 
     @Override
-    public void transferir(double valor, InterfaceConta contaDestino) {
-        this.sacar(valor);
-        contaDestino.depositar(valor);
+    public void transferir(double valor, InterfaceConta contaDestino, int senha) {
+        if(verificaSenha(senha)) {
+            this.sacar(valor, senha);
+            contaDestino.depositar(valor);
+        }
     }
 
     protected void imprimirInfoComum() {
@@ -51,6 +47,11 @@ public abstract class Conta implements InterfaceConta{
         System.out.println("Agência: " + this.agencia);
         System.out.println("Número da conta: " + this.numero);
         System.out.println("Saldo atual: R$ " + String.format("%.2f", this.saldo));
+    }
+
+    protected boolean verificaSenha(int senha){
+        boolean verificacao = this.senha == senha;
+        return verificacao;
     }
 
 }
