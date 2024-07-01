@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b48dc54a-9490-494c-96da-8f7561e00be3" name="Changes" comment="feat(conta): add password verification">
+    <list default="true" id="b48dc54a-9490-494c-96da-8f7561e00be3" name="Changes" comment="fix(conta): improving methods">
       <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/banco/Banco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/banco/Banco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cliente/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cliente/Cliente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/conta/Conta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/conta/Conta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/conta/ContaCorrente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/conta/ContaCorrente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/conta/ContaPoupanca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/conta/ContaPoupanca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/conta/InterfaceConta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/conta/InterfaceConta.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +24,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -100,13 +106,22 @@
       <option name="project" value="LOCAL" />
       <updated>1719602062545</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fix(conta): improving methods">
+      <option name="closed" value="true" />
+      <created>1719780197643</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1719780197643</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add basic project" />
     <MESSAGE value="Add base project" />
     <MESSAGE value="feat(conta): add password verification" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(conta): add password verification" />
+    <MESSAGE value="fix(conta): improving methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix(conta): improving methods" />
   </component>
 </project>

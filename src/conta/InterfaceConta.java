@@ -1,8 +1,8 @@
 package conta;
 
 public interface InterfaceConta {
-    void sacar(double valor, int senha);
+    void sacar(double valor);
     void depositar(double valor);
-    void transferir(double valor, InterfaceConta contaDestino, int senha);
-    void imprimirExtrato(int senha);
+    void transferir(double valor, InterfaceConta contaDestino);
+    void imprimirExtrato();
 }

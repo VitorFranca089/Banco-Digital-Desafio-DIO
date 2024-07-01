@@ -4,15 +4,13 @@ import cliente.Cliente;
 
 public class ContaPoupanca extends Conta{
 
-    public ContaPoupanca(Cliente cliente, int senha) {
-        super(cliente, senha);
+    public ContaPoupanca(Cliente cliente) {
+        super(cliente);
     }
 
     @Override
-    public void imprimirExtrato(int senha) {
-        if(verificaSenha(senha)){
-            System.out.println("=== Extrato Conta Poupança ===");
-            super.imprimirInfoComum();
-        }
+    public void imprimirExtrato() {
+        System.out.println("=== Extrato Conta Poupança ===");
+        super.imprimirInfoComum();
     }
 }

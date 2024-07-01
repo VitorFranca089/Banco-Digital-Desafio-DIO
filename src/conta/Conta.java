@@ -1,5 +1,6 @@
 package conta;
 
+import banco.Banco;
 import cliente.Cliente;
 
 public abstract class Conta implements InterfaceConta{
@@ -11,21 +12,26 @@ public abstract class Conta implements InterfaceConta{
     protected int numero;
     protected double saldo = 0;
     protected Cliente cliente;
-    protected int senha;
 
-    public Conta(Cliente cliente, int senha){
+    public Conta(Cliente cliente){
         this.agencia = AGENCIA_PADRAO;
         this.numero = SEQUENCIAL++;
         this.cliente = cliente;
-        this.senha = senha;
+        Banco.adicionaConta(this);
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
     }
 
     @Override
-    public void sacar(double valor, int senha) {
-        if(verificaSenha(senha)) {
-            if(saldo >= valor) {
-                saldo -= valor;
-            }
+    public void sacar(double valor) {
+        if(saldo >= valor) {
+            saldo -= valor;
         }
     }
 
@@ -37,10 +43,10 @@ public abstract class Conta implements InterfaceConta{
     }
 
     @Override
-    public void transferir(double valor, InterfaceConta contaDestino, int senha) {
-        double saldoAtual = saldo;
-        this.sacar(valor, senha);
-        if(saldo == saldoAtual){
+    public void transferir(double valor, InterfaceConta contaDestino) {
+        double saldoAntesSaque = saldo;
+        this.sacar(valor);
+        if(saldo < saldoAntesSaque){
             contaDestino.depositar(valor);
         }
     }
@@ -52,8 +58,9 @@ public abstract class Conta implements InterfaceConta{
         System.out.println(String.format("Saldo: R$ %.2f", this.saldo));
     }
 
-    protected boolean verificaSenha(int senha){
-        return this.senha == senha;
+    @Override
+    public String toString() {
+        return "Conta: " + agencia + ". Numero: " + numero + ". Titular: " + cliente;
     }
 
 }
