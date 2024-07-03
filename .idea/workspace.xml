@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b48dc54a-9490-494c-96da-8f7561e00be3" name="Changes" comment="fix(conta): improving methods">
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    <list default="true" id="b48dc54a-9490-494c-96da-8f7561e00be3" name="Changes" comment="project completed">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/banco/Banco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/banco/Banco.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cliente/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cliente/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/conta/Conta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/conta/Conta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/conta/ContaCorrente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/conta/ContaCorrente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/conta/ContaPoupanca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/conta/ContaPoupanca.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/conta/InterfaceConta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/conta/InterfaceConta.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +108,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719780197643</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="project completed">
+      <option name="closed" value="true" />
+      <created>1719870776514</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1719870776514</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -122,6 +124,7 @@
     <MESSAGE value="Add base project" />
     <MESSAGE value="feat(conta): add password verification" />
     <MESSAGE value="fix(conta): improving methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix(conta): improving methods" />
+    <MESSAGE value="project completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="project completed" />
   </component>
 </project>
