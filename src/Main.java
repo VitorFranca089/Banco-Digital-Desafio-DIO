@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class Main {
 
     private static final List<Cliente> clientes = Banco.listaClientes();
-    private static Scanner in = new Scanner(System.in);
+    private static final Scanner in = new Scanner(System.in);
 
     public static void main(String[] args) {
         menuPrincipal();
@@ -91,6 +91,8 @@ public class Main {
             }else{
                 System.out.println("Senha incorreta.");
             }
+        }else{
+            System.out.println("Cliente inexistente.");
         }
     }
 
@@ -163,6 +165,8 @@ public class Main {
                     if(clienteAlvo.isPresent()){
                         Conta contaAlvo = clienteAlvo.get().contaCliente(1);
                         contaCorrente.transferir(valor, contaAlvo);
+                    }else{
+                        System.out.println("Conta alvo inexistente.");
                     }
                     break;
                 case 4:
@@ -242,12 +246,12 @@ public class Main {
                         break;
                     case 2:
                         if(!Banco.listaClientes().isEmpty()){
-                            Banco.listaClientes().stream().forEach(System.out::println);
+                            Banco.listaClientes().forEach(System.out::println);
                         }
                         break;
                     case 3:
                         if(!Banco.listaContas().isEmpty()){
-                            Banco.listaContas().stream().forEach(System.out::println);
+                            Banco.listaContas().forEach(System.out::println);
                         }
                         break;
                     case 0:

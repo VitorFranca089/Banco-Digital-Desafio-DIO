@@ -20,18 +20,12 @@ public abstract class Conta implements InterfaceConta{
         Banco.adicionaConta(this);
     }
 
-    public int getNumero() {
-        return numero;
-    }
-
-    public Cliente getCliente() {
-        return cliente;
-    }
-
     @Override
     public void sacar(double valor) {
         if(saldo >= valor) {
             saldo -= valor;
+        }else{
+            System.out.println("Saldo insuficiente.");
         }
     }
 
